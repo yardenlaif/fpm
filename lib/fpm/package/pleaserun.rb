@@ -32,7 +32,7 @@ class FPM::Package::PleaseRun < FPM::Package
     pleaserun_attributes = [ "chdir", "user", "group", "umask", "chroot", "nice", "limit_coredump",
                              "limit_cputime", "limit_data", "limit_file_size", "limit_locked_memory",
                              "limit_open_files", "limit_user_processes", "limit_physical_memory", "limit_stack_size",
-                             "log_directory", "log_file_stderr", "log_file_stdout"]
+                             "log_directory", "log_file_stderr", "log_file_stdout", "delegate"]
 
     attributes[:pleaserun_name] ||= File.basename(command.first)
     attributes[:prefix] ||= "/usr/share/pleaserun/#{attributes[:pleaserun_name]}"
